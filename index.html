@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Fluxograma Vertical</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./style.css">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+		rel="stylesheet">
+</head>
+
+
+<body>
+	<header>
+		<h1 id="title">Fluxograma Vertical</h1>
+	</header>
+
+	<main class="container">
+		<section id="description">
+			<h2 class="sr-only">Descrição</h2>
+			<div class="card">
+				<h3>Símbolos</h3>
+				<div class="content">
+					<h4>
+						<img src="https://i.pinimg.com/originals/95/3d/6c/953d6c0a8026ae79e81a689692428c6f.png"
+							alt="Transporte">
+						<span>Transporte</span>
+					</h4>
+					<h4>
+						<img src="https://imagepng.org/wp-content/uploads/2017/10/circulo-preto.png" alt="Operação">
+						<span>Operação</span>
+					</h4>
+				</div>
+			</div>
+			<div class="card">
+				<h3>Rotina</h3>
+				<div class="content">
+					<div class="checkbox">
+						<input type="checkbox" id="atual" name="atual" value="Atual">
+						<label for="atual"> Atual</label>
+						<input type="checkbox" id="proposta" name="proposta" value="Proposta">
+						<label for="proposta"> Proposta</label>
+					</div>
+					<label class="sr-only" for="tpRotina">Tipo de rotina</label>
+					<input type="text" name="tpRotina" placeholder="Tipo de Rotina">
+				</div>
+			</div>
+			<div class="card">
+				<h3>Especificações</h3>
+				<div class="content">
+					<label class="sr-only" for="setor">setor</label>
+					<input type="text" id="setor" name="setor" placeholder="Setor">
+					<label class="sr-only" for="efetuado">efetuado por</label>
+					<input type="text" id="efetuado" name="efetuado" placeholder="Efetuado por">
+					<label class="sr-only" for="data">data do preenchimento</label>
+					<input type="date" id="data" name="data">
+				</div>
+			</div>
+		</section>
+
+		<section id="fluxograma">
+			<h2 class="sr-only">Fluxograma</h2>
+
+			<table id="data-table">
+				<thead>
+					<tr>
+						<th>ORDEM</th>
+						<th>SÍMBOLOS</th>
+						<th>UNIDADE</th>
+						<th>DESCRIÇÃO DE PASSOS</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</section>
+		<button id="adTr" onclick="Button.click()">+</button>
+	</main>
+	<footer>
+		<a href="./about.html">Saiba Mais</a>
+	</footer>
+	<script src="./scripts.js">
+
+	</script>
+
+</body>
+
+</html>

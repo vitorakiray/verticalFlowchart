@@ -1,0 +1,259 @@
+/*----------GLOBAL----------*/
+:root{
+ --dark-purple: #82589F;
+ --light-green: #1ebd1e;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /*faz com que o tamanho da caixa seja contado pela própria caixa e n pelo conteudo*/
+}
+
+html{
+	font-size: 93.75%;
+}
+
+body{
+	background-color: #f0f2f5;
+	font-family: 'Poppins', sans-serif;
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.container{
+	width: min(90vw, 900px); /*verifica o minimo e seleciona o menor (reponsavel pelo ajuste na tela)*/
+	margin: auto;
+}
+
+h2 {
+	margin-top: 3.2rem;
+	margin-bottom: 0.8rem;
+	font-weight: normal;
+}
+
+h3 {
+	font-weight: normal;
+}
+
+
+/*----------HEADER----------*/
+header{
+	background: #8429df;
+	
+	padding: 2rem 0 13rem; /*trabalha começando por cima e indo para direita
+	por exemplo na margem margin-top | margin-right | margin-bottom | margin-left;*/
+}
+
+#title{
+	text-align: center;
+	font-weight: 50;
+	font-size: 50px;
+
+	color: white;
+}
+
+/*----------DESCRIPTION----------*/
+#description{
+	margin-top: -8rem;
+}
+
+#description h2{
+	color: white;
+	margin-top: 0;
+}
+
+/*----------CARDS----------*/
+.card{
+	background: white;
+	padding: 1.5rem 2rem;
+	border-radius: 0.25rem;
+
+	margin-bottom: 0.5rem; /*espaçamento entre os cards*/
+}
+
+.card .content{
+	line-height: 3rem;
+
+	margin-top: 1rem;
+}
+
+.card h4{
+	display: flex;
+	align-items: center;
+}
+
+/*----------TABLE----------*/
+#fluxograma{
+	display: block; /*utilizado na responsividade para tabela se "encaixar" na página*/
+	overflow-x: auto; /*ajusta a rolagem apenas a tabela*/
+	margin: 2rem;
+}
+
+#data-table {
+	width: 100%;
+	border-spacing: 0;
+	text-align: center;
+}
+
+table th{
+	background: white;
+
+	padding: 1rem 2rem;
+	color: var(--dark-purple);
+	border-radius: 1rem 1rem 0 0;
+	border: 0.1rem solid var(--dark-purple);
+}
+
+table td {
+	border: 0.1rem solid var(--dark-purple);
+	padding: 1rem;
+}
+
+table tbody tr td:first-child {
+	padding: 0;
+}
+
+table td:hover{
+	background: white;
+
+	border: 0.10rem solid var(--light-green);
+	border-radius: 1rem;
+}
+
+/*----------TEXTAREA DO FLUXOGRAMA----------*/
+
+.container #fluxograma textarea {
+	text-align: center;
+	font-size: 1.5rem;
+
+
+	display: block;
+	background: none;
+	outline: none;
+	border: 0;
+
+	margin: 0.2rem;
+	padding: 0.8rem;
+	resize: none;
+	overflow: auto;
+	width: 100%;
+	height: 100%;
+} 
+
+
+/*----------INPUT----------*/
+.container #description input[type = "text"], input[type="date"]{
+	width:80%;
+	background: none;
+	border: 2px solid var(--dark-purple);
+	text-align: center;
+	margin: 0.25rem auto; /*0.25rem em cima e em baixo e automatico nas laterais(colocando ao centro)*/
+	display: block;
+	/*Muda o padrão dos elementos (O elemento "ocupa" a linha toda empurrando os outros para baixo),
+	se fosse display: inline, colocaria os elementos na mesma linha*/
+	padding: 1rem 1.5rem;
+	border-radius: 2rem;
+	outline: none;
+	transition:0.25s;
+}
+
+.container #description input[type = "text"]:focus, input[type="date"]:focus{
+	width: 100%;
+	border-color: var(--light-green)
+}
+
+.container .checkbox{
+	padding: 0 3.5rem;
+}
+
+
+/*----------BUTTON----------*/
+
+#adTr{
+	background: none;
+	border: 2px solid var(--light-green);
+	padding: 1.3rem 2.5rem;
+	border-radius: 2rem;
+	width: 2rem 2rem;
+	margin: 0 0 0 87%;
+
+
+	outline: none;
+	transition:0.25s;
+	cursor: pointer;
+
+
+	font-weight: bold;
+	font-size: 15px;
+	text-align: center;
+}
+
+#adTr:hover{
+	background: var(--light-green)
+}
+
+/*----------IMAGENS----------*/
+#description img{
+	width: 20px;
+	height: 20px;
+}
+
+#fluxograma .delete img{
+	width: 30px;
+	height: 30px;
+}
+
+#fluxograma img{
+	width: 50px;
+	height: 50px;
+}
+
+
+/*----------FOOTER----------*/
+footer{
+	text-align: center;
+	padding: 4rem 0 2rem;
+}
+
+footer a, #apresentation a{
+	text-decoration: none;
+	color: var(--dark-purple);
+	opacity: 0.8;
+}
+
+/*----------RESPONSIVE----------*/
+@media (min-width: 800px){
+	html{
+		font-size: 87.5%;
+	}
+	#description{
+		display: grid; /*display flex coloca um ao lado do outro já o grid utiliza os dois*/
+		grid-template-columns: repeat(3, 1fr); /*divide em três colunas separando 1fr para cada*/
+		/*ao inves de ser utilizado para repetir 3 vzs pode ser utilziado "auto-fit", que fará se ajustar automaticamente*/
+		gap: 0.5rem;
+	}
+}
+
+/*----------ABOUT----------*/
+#apresentation{
+	margin-left: 2rem;
+}
+
+#apresentation .list {
+	margin-left: 2.5rem;
+}
+
+#apresentation iframe {
+	margin: 4rem;
+}
