@@ -14,5 +14,5 @@ This is my first personal project 😄. The goal is to build a WEB application t
 - Add a total of symbols used
 - Add the missing symbols
 
-## 👓 See the Project
+## 👓 View the Project
 <img src="https://i.imgur.com/EeIZ7ut.png" alt="Vertical Flowchart"/>
